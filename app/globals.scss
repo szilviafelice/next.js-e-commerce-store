@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(18, 56, 41);
+}
+
+nav {
+  width: 100vw;
+  height: 4rem;
+  background: rgb(103, 138, 125);
+  justify-content: space-around;
+  align-items: center;
+  display: flex;
+
+  > div a {
+    margin: 4px;
+  }
+}
