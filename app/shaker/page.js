@@ -1,4 +1,6 @@
+import '../singleProduct.module.scss';
 import Image from 'next/image';
+import AddItemButton from '../AddItemButton';
 
 export const metadata = {
   title: 'Shaker set',
@@ -9,13 +11,19 @@ export const metadata = {
 export default function ShakerPage() {
   return (
     <div>
-      <h1>Rose gold Boston shaker set</h1>
+      <h1 data-test-id="product-name">Rose gold Boston shaker set</h1>
       <Image
         src="/shaker.jpg"
         alt="bostonshaker"
         width={650}
         height={450}
-      />
+        data-test-id="product-image"/>
+
+      <div className="product-price"         data-test-id="product-price">
+        89 €
+       <AddItemButton />
+      </div>
     </div>
   );
+
 }

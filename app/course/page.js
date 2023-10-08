@@ -1,6 +1,6 @@
+import '../singleProduct.module.scss';
 import Image from 'next/image';
-
-// import styles from './/sharedStyles.module.scss';
+import AddItemButton from '../AddItemButton';
 
 export const metadata = {
   title: 'Course',
@@ -11,8 +11,18 @@ export const metadata = {
 export default function CoursePage() {
   return (
     <div>
-      <h1>Cocktail course</h1>
-      <Image src="/course.jpg" alt="coctailcourse" width={650} height={490} />
+      <h1 data-test-id="product-name">Cocktail course</h1>
+      <Image
+      src="/course.jpg"
+      alt="coctailcourse"
+      width={650}
+      height={490}
+      data-test-id="product-image"/>
+      <AddItemButton />
+      <div className="product-price"         data-test-id="product-price">
+        290 €
+      </div>
     </div>
+
   );
 }

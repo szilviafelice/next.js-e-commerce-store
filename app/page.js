@@ -1,6 +1,4 @@
 import Image from 'next/image';
-import Link from 'next/link';
-import GenerateButton from './GenerateButton';
 
 export default function HomePage() {
   return (
@@ -10,7 +8,7 @@ export default function HomePage() {
       <Image src="/plants.jpg" alt="plants" width={1000} height={853} />
 
 
-      <GenerateButton />
+
     </main>
   );
 }
