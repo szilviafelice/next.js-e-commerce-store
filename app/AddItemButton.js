@@ -1,12 +1,10 @@
 'use client';
 
-import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import styles from './AddItemButton.module.scss';
 
 export default function AddItemButton({ addItem }) {
   const [quantity, setQuantity] = useState(1);;
-  const router = useRouter();
 
   return (
     <div>

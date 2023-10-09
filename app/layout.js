@@ -28,6 +28,9 @@ export default function RootLayout({ children }) {
         </nav>
 
         {children}
+        <footer className="footer">
+          <p>© 2023 Saneha Gin Shop  |  All rights reserved.</p>
+        </footer>
       </body>
     </html>
   );

@@ -1,9 +1,16 @@
+import CartComponent from '../CartComponent';
+
 export const metadata = {
   title: 'Cart',
   description:
-    'Welcome to Saneha, where the finest ingredients of Thailand blend gracefully with local tradition, symbolism, culture and values.',
+  'Shopping cart',
 };
 
 export default function CartPage() {
-  return <div>Cart</div>;
+  return (
+    <div>
+      <h1>Cart</h1>
+      <CartComponent />
+    </div>
+  );
 }

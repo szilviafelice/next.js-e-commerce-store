@@ -11,7 +11,7 @@ export const metadata = {
 export default function sanehaGin() {
   return (
     <div>
-      <h1 data-test-id="product-name">Saneha Gin</h1>
+      <h1 data-test-id="product-name">Saneha Gin 40% vol. 0,70l</h1>
       <Image
         src="/gin.jpg"
         alt="sanehabottle"

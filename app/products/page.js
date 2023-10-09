@@ -13,22 +13,22 @@ export default function ProductsPage() {
   return (
     <main>
       <h1 data-test-id="products-link">Our products</h1>
-
-      {products.map((product) => {
-        return (
-          <div key={`productt-${product.id}`}>
-            <Link href={product.id}>{product.name}</Link>
-
-            <Image
-            src={`/${product.id}.jpg`}
-            alt={product.name}
-            width={300}
-            height={200}
-            />
-          </div>
-
+      <div className="image-grid">
+        {products.map((product) => {
+          return (
+            <div key={`product-${product.id}`} className="product-item">
+              <Image
+                src={`/${product.id}.jpg`}
+                alt={product.name}
+                width={500}
+                height={325}
+              />
+              <Link href={product.id}>{product.name}</Link>
+</div>
         );
       })}
+      </div>
     </main>
+
   );
 }
