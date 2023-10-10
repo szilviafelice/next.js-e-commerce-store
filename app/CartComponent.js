@@ -5,12 +5,7 @@ import { useState } from 'react';
 
 export default function CartComponent() {
 
-  const [cart, setCart] = useState([
-    { id: 'gin', name: 'Saneha Gin', price: 39.90, quantity: 1 },
-    { id: 'shaker', name: 'Boston Shaker Set', price: 89, quantity: 1 },
-    { id: 'glass', name: 'Highball Glass Set', price: 79, quantity: 1 },
-    { id: 'course', name: 'Cocktail course', price: 290, quantity: 1 },
-  ]);
+  const [cart, setCart] = useState([]);
   const router = useRouter();
 
   const removeFromCart = (id) => {
@@ -25,13 +20,15 @@ export default function CartComponent() {
   return (
     <div>
       {cart.map((product) => (
-        // eslint-disable-next-line no-restricted-syntax
-        <div key={product.id}>
+         // eslint-disable-next-line no-restricted-syntax
+         <div key={product.id} data-test-id={`cart-product-${product.id}`}>
           <span>{product.name}</span>
-          <span>{product.quantity}</span>
+          <span data-test-id={`cart-product-quantity-${product.id}`}>{product.quantity}</span>
           <span>{product.price * product.quantity}</span>
-          <button onClick={() => removeFromCart(product.id)}>Remove</button>
-        </div>
+          <button data-test-id={`cart-product-remove-${product.id}`} onClick={() => removeFromCart(product.id)}>
+            Remove
+          </button>
+          </div>
       ))}
       <div>Total: {totalPrice}</div>
       <button onClick={() => router.push('/checkout')}>Checkout</button>

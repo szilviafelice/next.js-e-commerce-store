@@ -19,9 +19,9 @@ export default function ProductsPage() {
             <div key={`product-${product.id}`} className="product-item">
               <Image
                 src={`/${product.id}.jpg`}
-                alt={product.name}
                 width={500}
                 height={325}
+                alt={product.name}
               />
               <Link href={product.id}>{product.name}</Link>
 </div>
