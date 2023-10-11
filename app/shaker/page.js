@@ -1,4 +1,3 @@
-import '../singleProduct.module.scss';
 import Image from 'next/image';
 import AddItemButton from '../AddItemButton';
 
@@ -12,9 +11,11 @@ export default function ShakerPage() {
   return (
     <div>
       <h1 data-test-id="product-name">Rose gold Boston shaker set</h1>
+      <div
+      className="product-image">
       <Image
         src="/shaker.jpg"
-        alt="bostonshaker"
+        alt="boston shaker"
         width={650}
         height={450}
         data-test-id="product-image"/>
@@ -23,6 +24,7 @@ export default function ShakerPage() {
         89 €
        <AddItemButton />
       </div>
+    </div>
     </div>
   );
 

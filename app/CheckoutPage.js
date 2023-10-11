@@ -29,14 +29,15 @@ export default function CheckoutPage() {
   return (
     <form onSubmit={handleSubmit}>
       <input
+        // eslint-disable-next-line upleveled/no-unnecessary-html-attributes
         type="text"
         placeholder="First Name"
         name="firstName"
         onChange={handleChange}
         required
         data-test-id="checkout-first-name"
+      // eslint-disable-next-line react/jsx-no-comment-textnodes
       />
-
 
       <button type="submit" data-test-id="checkout-confirm-order">Confirm Order</button>
     </form>

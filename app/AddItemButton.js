@@ -4,7 +4,9 @@ import { useState } from 'react';
 import styles from './AddItemButton.module.scss';
 
 export default function AddItemButton({ addItem }) {
-  const [quantity, setQuantity] = useState(1);;
+  const [quantity, setQuantity] = useState(1);
+
+
 
   return (
     <div>
@@ -28,6 +30,7 @@ export default function AddItemButton({ addItem }) {
         className={styles.addItemButton}
         data-test-id="product-add-to-cart"
         onClick={() => {
+          console.log("Button clicked, adding item.");
           addItem(quantity);
         }}
       >

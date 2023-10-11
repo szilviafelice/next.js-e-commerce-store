@@ -1,4 +1,3 @@
-import '../singleProduct.module.scss';
 import Image from 'next/image';
 import AddItemButton from '../AddItemButton';
 
@@ -13,9 +12,12 @@ export default function HighballPage() {
     <div>
       <h1 data-test-id="product-name">Vintage Art Deco Highball Glasses</h1>
       <p>Vintage Art Deco 1920s' | Set of 4 </p>
+      <div
+      className="product-image">
+
       <Image
         src="/glass.jpg"
-        alt="highballglasses"
+        alt="highball glasses"
         width={650}
         height={490}
         data-test-id="product-image"/>
@@ -23,6 +25,7 @@ export default function HighballPage() {
         79 €
        <AddItemButton />
       </div>
+    </div>
     </div>
   );
 }
