@@ -1,17 +1,21 @@
+'use client';
+
 import Image from 'next/image';
 import { useState } from 'react';
 import AddItemButton from '../AddItemButton';
 
-export const metadata = {
+/*export const metadata = {
   title: 'Course',
   description:
     'Welcome to Saneha, where the finest ingredients of Thailand blend gracefully with local tradition, symbolism, culture and values.',
-};
+};*/
 
 export default function CoursePage() {
   const [cart, setCart] = useState([]);
 
-  const addItem = (quantity) => {
+   const addItem = (quantity) => {
+    const newItem = { id: 'course', quantity };
+    setCart([...cart, newItem]);
     console.log(`Added ${quantity} items to cart.`);
   };
 

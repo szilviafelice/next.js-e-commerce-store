@@ -43,12 +43,14 @@ h1 {
 }
 
 .product-item {
-  text-align: center;
+  text-align: flex;
+  flex-direction: column;
+  align-items: center;
   color: whitesmoke;
+}
 
-  &visited {
-    color: whitesmoke;
-  }
+.product-item a {
+  color: whitesmoke;
 }
 
 .footer {

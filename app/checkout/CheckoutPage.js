@@ -39,7 +39,8 @@ export default function CheckoutPage() {
       // eslint-disable-next-line react/jsx-no-comment-textnodes
       />
 
-      <button type="submit" data-test-id="checkout-confirm-order">Confirm Order</button>
+
+      <button data-test-id="checkout-confirm-order">Confirm Order</button>
     </form>
   );
 }

@@ -3,18 +3,14 @@
 import { useState } from 'react';
 import styles from './AddItemButton.module.scss';
 
-export default function AddItemButton({ addItem }) {
-  const [quantity, setQuantity] = useState(1);
-
-
-
+export default function AddItemButton({ addItem, qty, setQty}) {
   return (
     <div>
       <p>Qty</p>
       <select
-        value={quantity}
+        value={qty}
         data-test-id="product-quantity"
-        onChange={(e) => setQuantity(e.target.value)}
+        onChange={(e) => setQty(e.target.value)}
       >
         <option value="1">1</option>
         <option value="2">2</option>
@@ -30,8 +26,8 @@ export default function AddItemButton({ addItem }) {
         className={styles.addItemButton}
         data-test-id="product-add-to-cart"
         onClick={() => {
-          console.log("Button clicked, adding item.");
-          addItem(quantity);
+        console.log({ qty });
+          addItem();
         }}
       >
        Add Item
