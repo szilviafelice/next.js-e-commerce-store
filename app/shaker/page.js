@@ -1,13 +1,25 @@
+'use client';
+
 import Image from 'next/image';
+import { useCallback, useMemo, useState } from 'react';
 import AddItemButton from '../AddItemButton';
+import { addItem } from '../cookies/actions';
 
-export const metadata = {
-  title: 'Shaker set',
-  description:
-    'Welcome to Saneha, where the finest ingredients of Thailand blend gracefully with local tradition, symbolism, culture and values.',
-};
+export default function Bostonshaker() {
+  const [qty, setQty] = useState(1)
+  const shakerObject = useMemo(()=> {
+    return {
+      type: 'Boston Shaker',
+      qty,
+      price: qty * 89,
+    }
+  },[qty]);
 
-export default function ShakerPage() {
+const addItemCallback = useCallback(()=> addItem(shakerObject),[shakerObject]
+)
+
+console.log({shakerObject});
+
   return (
     <div>
       <h1 data-test-id="product-name">Rose gold Boston shaker set</h1>
@@ -20,9 +32,11 @@ export default function ShakerPage() {
         height={450}
         data-test-id="product-image"/>
 
-      <div className="product-price"         data-test-id="product-price">
+      <div className="product-price"
+      data-test-id="product-price">
         89 €
-       <AddItemButton />
+
+       <AddItemButton qty={qty} setQty={setQty} addItem={addItemCallback}/>
       </div>
     </div>
     </div>

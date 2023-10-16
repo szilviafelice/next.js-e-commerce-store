@@ -17,7 +17,7 @@ export default function SanehaGin() {
     return {
       type: 'Saneha Gin',
       qty,
-      price: qty * 39.90,
+      price: qty * 39,
     }
   },[qty]);
 
@@ -25,7 +25,6 @@ const addItemCallback = useCallback(()=> addItem(ginObject),[ginObject]
 )
 
 console.log({ginObject});
-
   return (
     <div>
       <h1 data-test-id="product-name">Saneha Gin 40% vol. 0,70l</h1>
@@ -37,8 +36,9 @@ console.log({ginObject});
         width={650}
         height={410}
         data-test-id="product-image"/>
-      <div className="product-price"         data-test-id="product-price">
-        39,90 €
+      <div className="product-price"
+           data-test-id="product-price">
+        39 €
         <AddItemButton qty={qty} setQty={setQty} addItem={addItemCallback}/>
       </div>
     </div>

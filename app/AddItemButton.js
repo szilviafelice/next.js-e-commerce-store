@@ -1,6 +1,5 @@
 'use client';
 
-import { useState } from 'react';
 import styles from './AddItemButton.module.scss';
 
 export default function AddItemButton({ addItem, qty, setQty}) {
