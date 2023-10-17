@@ -5,12 +5,6 @@ import { useCallback, useMemo, useState } from 'react';
 import AddItemButton from '../AddItemButton';
 import { addItem } from '../cookies/actions';
 
-/* export const metadata = {
-  title: 'Saneha gin',
-  description:
-    'Welcome to Saneha, where the finest ingredients of Thailand blend gracefully with local tradition, symbolism, culture and values.',
-};*/
-
 export default function SanehaGin() {
   const [qty, setQty] = useState(1)
   const ginObject = useMemo(()=> {

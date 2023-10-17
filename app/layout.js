@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <nav>
         <div className="headerLogo">
-          <Image src="/logo.jpg" alt="Company logo" width={272} height={55} />
+          <Image src="/sanehaLogo.png" alt="Company logo" width={100} height={100} />
         </div>
           <div>
             <Link href="/">Home</Link>
